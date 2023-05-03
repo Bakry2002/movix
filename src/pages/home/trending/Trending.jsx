@@ -19,7 +19,7 @@ export const Trending = () => {
                 <div className="carousel__title">Trending</div>
                 <SwitchTabs data={["Day", "Week"]} onTabChange={onTabChange}/>
             </ContentWrapper>
-            <Carousel />
+            <Carousel data={data?.results} loading={isLoading}/>
         </div>
 
     )
