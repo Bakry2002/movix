@@ -1,0 +1,25 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#f3947d",
+        "activityBar.background": "#f3947d",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#e2fce7",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#f3947d",
+        "statusBar.background": "#ef6e4e",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#eb481f",
+        "statusBarItem.remoteBackground": "#ef6e4e",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#ef6e4e",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#ef6e4e99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "hsla(12, 83%, 62%, 1)",
+    "cSpell.words": [
+        "Movix"
+    ]
+}
