@@ -4,7 +4,7 @@ import { fetchDataFromApi } from "./utils/api"
 import { useSelector, useDispatch } from "react-redux";
 // useSelector is a hook that allows you to extract (Read) data from the Redux store state, using a selector function.
 // useDispatch is a hook that returns a reference to the dispatch function from the Redux store.
-import { getApiConfiguration } from "./store/homeSlice";
+import { getApiConfiguration, getGenres } from "./store/homeSlice";
 
 import { Header } from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -48,8 +48,10 @@ function App() {
     data.map(({ genres }) => {
       return genres.map((item) => (allGenres[item.id] = item))
     })
-
+    
+    dispatch(getGenres(allGenres));
   }
+
   return (
     <BrowserRouter>
       <Header />
