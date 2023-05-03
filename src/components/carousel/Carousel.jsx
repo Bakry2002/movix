@@ -41,7 +41,7 @@ export const Carousel = ({ data, isLoading }) => {
                                     <div key={item.id} className="carousel-item">
                                         <div className="poster-block">
                                             <Img src={posterUrl}/>
-                                            <CircleRating rating={item.vote_average}/>
+                                            <CircleRating rating={item.vote_average.toFixed(1)}/>
                                         </div>
                                         <div className="text-block">
                                             <span className="title">{ item.title || item.name }</span>

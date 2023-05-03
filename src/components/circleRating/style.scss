@@ -3,10 +3,25 @@
     background-color: var(--black);
     border-radius: 50%;
     padding: 2px;
+    position: relative;
+    &::before {
+        content: "%";
+        position: absolute;
+        top: 14px;
+        right: 7px;
+        font-size: 8px;
+        font-weight: lighter;
+        color: var(--black);
+    }
     .CircularProgressbar-text {
-        font-size: 34px;
-        font-weight: 700;
+        font-size: 40px;
+        font-weight: bolder;
         fill: var(--black);
+        dominant-baseline: central;
+        text-anchor: middle;
+        &[x="50"] {
+            transform: translateX(-5px);
+        }
     }
     .CircularProgressbar-trail {
         stroke: transparent;

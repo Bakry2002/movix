@@ -19,6 +19,7 @@ function App() {
 
   useEffect(() => {
     fetchApiConfig();
+    fetchGenres();
   }, [])
 
   const fetchApiConfig = () => {
@@ -32,6 +33,22 @@ function App() {
 
       dispatch(getApiConfiguration(url)); // dispatching an action to the store
     })
+  }
+
+  const fetchGenres = async () => {
+    let requests = []; 
+    let mediaTypes = ['movie', 'tv'];
+    let allGenres = {};
+
+    mediaTypes.forEach((mediaType) => {
+      requests.push(fetchDataFromApi(`/genre/${mediaType}/list`))
+    })
+
+    const data = await Promise.all(requests);
+    data.map(({ genres }) => {
+      return genres.map((item) => (allGenres[item.id] = item))
+    })
+
   }
   return (
     <BrowserRouter>
