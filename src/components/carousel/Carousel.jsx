@@ -12,10 +12,11 @@ import PosterFallback from "../../assets/no-poster.png";
 import { Genres } from "../genres/Genres";
 import "./style.scss";
 
-export const Carousel = ({ data, isLoading, mediaType }) => {
+export const Carousel = ({ data, loading, mediaType }) => {
     const carouselContainer = useRef();
     const { url } = useSelector(state => state.home);
     const navigate = useNavigate();
+
 
     const carouselNavigationHandler = (direction) => {
         const container = carouselContainer.current;
@@ -44,7 +45,7 @@ export const Carousel = ({ data, isLoading, mediaType }) => {
             <ContentWrapper>
                 <BsFillArrowLeftCircleFill className="carousel-left-nav arrow" onClick={() => carouselNavigationHandler('left')} />
                 <BsFillArrowRightCircleFill className="carousel-right-nav arrow" onClick={() => carouselNavigationHandler('right')} />
-                { !isLoading ? (
+                { !loading ? (
                         <div className="carousel-items" ref={carouselContainer}>
                             { data?.map(item => {
                                 const posterUrl = item.poster_path ? url.poster + item.poster_path : PosterFallback;
@@ -57,7 +58,7 @@ export const Carousel = ({ data, isLoading, mediaType }) => {
                                         <div className="poster-block">
                                             <Img src={posterUrl}/>
                                             <CircleRating rating={item.vote_average.toFixed(1)}/>
-                                            <Genres data={item.genre_ids.slice(0, 2)} />
+                                            <Genres data={item.genre_ids.slice(0, 2)} /> 
                                         </div>
                                         <div className="text-block">
                                             <span className="title">{ item.title || item.name }</span>

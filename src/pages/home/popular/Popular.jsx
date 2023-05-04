@@ -8,7 +8,7 @@ import useFetch from "../../../hooks/useFetch"
 
 export const Popular = () => {
     const [ mediaType, setMediaType ] = useState('movie'); // day or week 
-    const { data, isLoading } = useFetch(`/${mediaType}/popular`)
+    const { data, loading } = useFetch(`/${mediaType}/popular`)
 
     const onTabChange = (mediaType) => {
         setMediaType(mediaType === "Movies" ? "movie" : "tv")
@@ -20,7 +20,7 @@ export const Popular = () => {
                 <div className="carousel__title">What's Popular</div>
                 <SwitchTabs data={["Movies", "TV Shows"]} onTabChange={onTabChange}/>
             </ContentWrapper>
-            <Carousel data={data?.results} loading={isLoading} mediaType={mediaType}/>
+            <Carousel data={data?.results} loading={loading} mediaType={mediaType}/>
         </div>
 
     )

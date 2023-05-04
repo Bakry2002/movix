@@ -5,6 +5,8 @@ import { Trending } from './trending/Trending'
 import { Popular } from './popular/Popular'
 import { TopRated } from './topRated/TopRated'
 
+
+
 export const Home = () => {
   return (
     <div className="home-page">
