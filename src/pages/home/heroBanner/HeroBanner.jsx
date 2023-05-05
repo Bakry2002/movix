@@ -30,6 +30,7 @@ export const HeroBanner = () => {
         }
     }
 
+
 /*     const getHeroBannerBg = async () => {
         const MAX_PAGES = 5;
         
@@ -86,7 +87,7 @@ export const HeroBanner = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         />
-                        <button>Search</button>
+                        <button onClick={() => navigate(`/search/${query}`)}>Search</button>
                     </div>
                 </div>
             </ContentWrapper>
