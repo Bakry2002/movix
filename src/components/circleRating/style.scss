@@ -10,14 +10,13 @@
         top: 14px;
         right: 7px;
         font-size: 8px;
-        font-weight: lighter;
         color: var(--black);
     }
     .CircularProgressbar-text {
-        font-size: 15px;
-        font-weight: bolder;
+        font-size: 14px;
+        font-weight: 600;
         fill: var(--black);
-        transform: translateX(-2px);
+        transform: translateX(-3px);
     }
     .CircularProgressbar-trail {
         stroke: transparent;

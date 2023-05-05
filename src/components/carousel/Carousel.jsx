@@ -12,7 +12,7 @@ import PosterFallback from "../../assets/no-poster.png";
 import { Genres } from "../genres/Genres";
 import "./style.scss";
 
-export const Carousel = ({ data, loading, mediaType }) => {
+export const Carousel = ({ data, loading, mediaType, title }) => {
     const carouselContainer = useRef();
     const { url } = useSelector(state => state.home);
     const navigate = useNavigate();
@@ -43,6 +43,7 @@ export const Carousel = ({ data, loading, mediaType }) => {
     return (
         <div className="carousel">
             <ContentWrapper>
+                { title && <div className="carousel-title">{ title }</div>}
                 <BsFillArrowLeftCircleFill className="carousel-left-nav arrow" onClick={() => carouselNavigationHandler('left')} />
                 <BsFillArrowRightCircleFill className="carousel-right-nav arrow" onClick={() => carouselNavigationHandler('right')} />
                 { !loading ? (

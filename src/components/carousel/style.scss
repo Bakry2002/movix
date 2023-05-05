@@ -153,14 +153,14 @@
                 display: flex;
                 flex-direction: column;
                 .title {
-                    font-size: 14px;
+                    font-size: 16px;
                     margin-bottom: 10px;
                     line-height: 24px;
                     font-weight: 200;
                     font-style: italic;
                     @include ellipsis(1);
                     @include md {
-                        font-size: 16px;
+                        font-size: 18px;
                     }
                 }
                 .date {
