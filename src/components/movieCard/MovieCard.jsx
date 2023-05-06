@@ -18,13 +18,13 @@ const MovieCard = ({ data, fromSearch, mediaType }) => {
         : PosterFallback;
     return (
         <div
-            className="movieCard"
+            className="movie-card"
             onClick={() =>
                 navigate(`/${data.media_type || mediaType}/${data.id}`)
             }
         >
-            <div className="posterBlock">
-                <Img className="posterImg" src={posterUrl} />
+            <div className="poster-block">
+                <Img className="poster-img" src={posterUrl} />
                 {!fromSearch && (
                     <React.Fragment>
                         <CircleRating rating={data.vote_average.toFixed(1)} />
@@ -32,7 +32,7 @@ const MovieCard = ({ data, fromSearch, mediaType }) => {
                     </React.Fragment>
                 )}
             </div>
-            <div className="textBlock">
+            <div className="text-block">
                 <span className="title">{data.title || data.name}</span>
                 <span className="date">
                     {dayjs(data.release_date).format("MMM D, YYYY")}

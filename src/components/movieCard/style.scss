@@ -1,6 +1,6 @@
 // CSS
 @import "../../mixins.scss";
-.movieCard {
+.movie-card {
     width: calc(50% - 5px);
     margin-bottom: 25px;
     cursor: pointer;
@@ -11,7 +11,7 @@
     @include lg {
         width: calc(20% - 16px);
     }
-    .posterBlock {
+    .poster-block {
         position: relative;
         width: 100%;
         aspect-ratio: 1 / 1.5;
@@ -38,7 +38,7 @@
                 object-position: center;
             }
         }
-        .circleRating {
+        .circle-rating {
             width: 40px;
             height: 40px;
             position: relative;
@@ -60,7 +60,7 @@
             }
         }
     }
-    .textBlock {
+    .text-block {
         color: white;
         display: flex;
         flex-direction: column;
@@ -79,7 +79,7 @@
         }
     }
     &:hover {
-        .posterBlock {
+        .poster-block {
             opacity: 0.5;
         }
     }
